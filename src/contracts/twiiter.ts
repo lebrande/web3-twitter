@@ -1,18 +1,7 @@
 import { Address } from "viem";
 
-export const TWITTER_ADDRESS: Address = '0xa85233C63b9Ee964Add6F2cffe00Fd84eb32338f';
+export const TWITTER_ADDRESS: Address = '0xcAB93CFF5786465850f8CAD4140B26B0CEb90Bad';
 export const TWITTER_ABI = [
-  {
-    inputs: [
-      {
-        internalType: "address",
-        name: "_owner",
-        type: "address",
-      },
-    ],
-    stateMutability: "nonpayable",
-    type: "constructor",
-  },
   {
     anonymous: false,
     inputs: [
@@ -244,19 +233,6 @@ export const TWITTER_ABI = [
         internalType: "uint256",
         name: "_tweetsCount",
         type: "uint256",
-      },
-    ],
-    stateMutability: "view",
-    type: "function",
-  },
-  {
-    inputs: [],
-    name: "owner",
-    outputs: [
-      {
-        internalType: "address",
-        name: "",
-        type: "address",
       },
     ],
     stateMutability: "view",
