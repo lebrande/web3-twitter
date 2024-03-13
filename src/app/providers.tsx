@@ -5,15 +5,18 @@ import { useState, type ReactNode } from 'react'
 import { WagmiProvider } from 'wagmi'
 
 import { config } from '@/wagmi'
+import { ChakraProvider } from '@chakra-ui/react'
 
 export function Providers(props: { children: ReactNode }) {
   const [queryClient] = useState(() => new QueryClient())
 
   return (
-    <WagmiProvider config={config}>
-      <QueryClientProvider client={queryClient}>
-        {props.children}
-      </QueryClientProvider>
-    </WagmiProvider>
+    <ChakraProvider>
+      <WagmiProvider config={config}>
+        <QueryClientProvider client={queryClient}>
+          {props.children}
+        </QueryClientProvider>
+      </WagmiProvider>
+    </ChakraProvider>
   )
 }
