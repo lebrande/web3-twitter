@@ -1,0 +1,1 @@
+export const INITIAL_BLOCK_NUMBER = 5476875n;
