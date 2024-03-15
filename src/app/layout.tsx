@@ -4,6 +4,7 @@ import { type ReactNode } from 'react'
 import '@rainbow-me/rainbowkit/styles.css';
 import { Providers } from './providers'
 import { Navbar } from '@/components/Navbar';
+import { Container, VStack } from '@chakra-ui/react';
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -18,7 +19,11 @@ export default function RootLayout(props: { children: ReactNode }) {
       <body className={inter.className}>
         <Providers>
           <Navbar />
-          {props.children}
+          <Container maxW="md">
+            <VStack alignItems="stretch" gap="2rem" my="2rem">
+              {props.children}
+            </VStack>
+          </Container>
         </Providers>
       </body>
     </html>

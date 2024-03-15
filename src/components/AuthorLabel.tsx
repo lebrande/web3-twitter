@@ -1,6 +1,7 @@
 import { shortenAddress } from "@/utils/shortenAddress";
-import { Avatar, HStack, Text, WrapItem } from "@chakra-ui/react";
+import { Avatar, HStack, WrapItem } from "@chakra-ui/react";
 import { Address } from "viem";
+import { Link } from '@chakra-ui/next-js'
 
 interface Props {
   authorAddress: Address;
@@ -14,7 +15,9 @@ export const AuthorLabel = ({
       <WrapItem>
         <Avatar name={authorAddress} size="xs" />
       </WrapItem>
-      <Text fontSize="xs">{shortenAddress(authorAddress)}</Text>
+      <Link fontSize="xs" href={`/author/${authorAddress}`}>
+        {shortenAddress(authorAddress)}
+      </Link>
     </HStack>
   );
 };
