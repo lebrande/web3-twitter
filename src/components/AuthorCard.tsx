@@ -1,5 +1,6 @@
 import { AuthorLabel } from "@/components/AuthorLabel";
-import { Button, Card, CardBody, HStack } from "@chakra-ui/react";
+import { FollowAuthorButton } from "@/components/FollowAuthorButton";
+import { Card, CardBody, HStack } from "@chakra-ui/react";
 import { Address } from "viem";
 
 interface Props {
@@ -14,9 +15,7 @@ export const AuthorCard = ({
       <CardBody>
         <HStack justifyContent="space-between">
           <AuthorLabel authorAddress={authorAddress} />
-          <Button colorScheme="blue">
-            Follow me
-          </Button>
+          <FollowAuthorButton authorAddress={authorAddress} />
         </HStack>
       </CardBody>
     </Card>
